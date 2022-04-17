@@ -1,0 +1,25 @@
+1. pwd
+2. mkdir folderName
+3. cd folderName
+4. mkdir folderName1 folderName2 folderName3
+5. cd folderName1
+6. touch fileName1.txt fileName2.txt fileName3.txt fileName1.json fileName2.json
+7. mkdir -p one/two/three
+8. ll folderName or ls or ls -la
+9-11. cat fileName.txt => some text =>press Enter => control+C
+12. cd ..
+13. mv fileName1.json fileName2.json ../folderName2/
+14. cp fileName1.json fileName2.json  ../folderName3
+15. find Terminal/ -name fileName1.json
+16. tail -f fileName1.txt
+17. head -n 5 fileName1.json
+18. tail -n 5 fileName1.json
+19. less homework1.txt
+20. date
+21. curl http://162.55.220.72:5005/terminal-hw-request -> curl http://162.55.220.72:5005/get_method?name=Vlad&age=26 -> ["Vlad","26"]
+22. 
+touch script.sh
+vim script.sh
+mkdir folderName1 folderName2 folderName3 && cd folderName1 && touch fileName1.txt fileName2.txt fileName3.txt fileName1.json fileName2.json && mkdir -p one/two/three  && ll && mv fileName1.json fileName2.json ../folderName2/
+chmod +x script.sh
+./script.sh
