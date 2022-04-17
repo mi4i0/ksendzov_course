@@ -16,10 +16,13 @@
 18. tail -n 5 fileName1.json
 19. less homework1.txt
 20. date
-21. curl http://162.55.220.72:5005/terminal-hw-request -> curl http://162.55.220.72:5005/get_method?name=Vlad&age=26 -> ["Vlad","26"]
+21.
+curl http://162.55.220.72:5005/terminal-hw-request
+->
+curl http://162.55.220.72:5005/get_method?name=Vlad&age=26 -> ["Vlad","26"]
 22. 
 touch script.sh
 vim script.sh
-mkdir folderName1 folderName2 folderName3 && cd folderName1 && touch fileName1.txt fileName2.txt fileName3.txt fileName1.json fileName2.json && mkdir -p one/two/three  && ll && mv fileName1.json fileName2.json ../folderName2/
+**check script.sh**
 chmod +x script.sh
 ./script.sh

@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir qa_test
 cd qa_test
 mkdir qa1
 mkdir qa2
