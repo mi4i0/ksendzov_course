@@ -1,4 +1,4 @@
-let string = prompt('Give me your string:');
+let input = prompt('Give me your string:');
 
 function isEmptyStringValidator(string) {
     let isString = typeof string === 'string'
@@ -56,4 +56,4 @@ function stringValidator(string) {
     validationResults.includes(false) ? console.log('Sorry, fix your string') : console.log(`Your string is fine!`)
 }
 
-stringValidator(string)
+stringValidator(input)
