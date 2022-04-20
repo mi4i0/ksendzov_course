@@ -35,9 +35,6 @@ if (age_1 < age_2) {
 function checkAge(age) {
     let age_minimum = 18;
     let age_maximum = 60;
-    if (typeof age === 'string'){
-        age = age.replace(/\D/, "")
-    }
     if (isNaN(age) || !age){
         throw Error(age + ' is not a number')
     }
@@ -55,5 +52,5 @@ function checkAge(age) {
 checkAge(17)
 checkAge(18)
 checkAge(61)
-checkAge('2*')
+checkAge('2')
 checkAge(prompt('What is your age?'))

@@ -1,21 +1,59 @@
-let string = prompt('Give me your string:')
+let string = prompt('Give me your string:');
 
-if(!string){
-    console.log('String shouldn\'t be empty')
-}else if (string.length < 5) {
-    console.log('String length less than 5')
-} else if (string.length > 64) {
-    console.log('String longer then 64')
-} else if (!/[a-zA-Z]/g.test(string)){
-    console.log('String should contain letters')
-} else if (!/[A-Z]/g.test(string)){
-    console.log('String should contain at least 1 capital letter')
-} else if (!/\d/g.test(string)){
-    console.log('String should contain at least 1 number')
-} else if (!/@/g.test(string)){
-    console.log('String should contain at least 1 @ symbol')
-} else{
-    console.log(string)
+function isEmptyValidator(string) {
+    let isString = typeof string === 'string'
+    string ? console.log(`String length is ${string.length}`) : console.log('String is empty!');
+    return isString
+}
+
+function minLengthValidation(string) {
+    let isValid = string.length > 4
+    !isValid ? console.log('String length less than 5') : null;
+    return isValid
+}
+
+function maxLengthValidation(string) {
+    let isValid = string.length < 65
+    !isValid ? console.log('String length more that 64 symbols') : null;
+    return isValid
+}
+
+function lettersContainingValidator(string) {
+    let isValid = /[a-zA-Z]/g.test(string)
+    !isValid ? console.log('String should contain letters') : null;
+    return isValid
+}
+
+function capitalLettersValidator(string) {
+    let isValid = /[A-Z]/g.test(string)
+    !isValid ? console.log('String should contain at least 1 capital letter') : null;
+    return isValid
+}
+
+function numberContainingValidator(string) {
+    let isValid = /\d/g.test(string)
+    !isValid ? console.log('String should contain at least 1 number') : null;
+    return isValid
+}
+
+function dogSymbolContainingValidator(string) {
+    let isValid = /@/g.test(string)
+    !isValid ? console.log('String should contain at least 1 @ symbol') : null;
+    return isValid
 }
 
 
+function stringValidator(string) {
+    let validationResults = [];
+    validationResults.push(isEmptyValidator(string))
+    validationResults.push(minLengthValidation(string))
+    validationResults.push(maxLengthValidation(string))
+    validationResults.push(lettersContainingValidator(string))
+    validationResults.push(capitalLettersValidator(string))
+    validationResults.push(numberContainingValidator(string))
+    validationResults.push(dogSymbolContainingValidator(string))
+    console.log(validationResults)
+    validationResults.includes(false) ? console.log('Sorry, fix your string') : console.log(`Your string is fine!`)
+}
+
+stringValidator(string)
