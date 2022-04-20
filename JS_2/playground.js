@@ -1,6 +1,6 @@
 let string = prompt('Give me your string:');
 
-function isEmptyValidator(string) {
+function isEmptyStringValidator(string) {
     let isString = typeof string === 'string'
     string ? console.log(`String length is ${string.length}`) : console.log('String is empty!');
     return isString
@@ -45,7 +45,7 @@ function dogSymbolContainingValidator(string) {
 
 function stringValidator(string) {
     let validationResults = [];
-    validationResults.push(isEmptyValidator(string))
+    validationResults.push(isEmptyStringValidator(string))
     validationResults.push(minLengthValidation(string))
     validationResults.push(maxLengthValidation(string))
     validationResults.push(lettersContainingValidator(string))
